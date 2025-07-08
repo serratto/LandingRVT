@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinventarts - Inovação Digital e Financeira</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020202;
+            color: #E0E0E0;
+        }
+       
+        .gold-text {
+            color: #46cf5b;/*#D4AF37;*/
+        }
+        .gold-bg {
+            background-color: #D4AF37;
+        }
+        .gold-border {
+            border-color: #D4AF37;
+        }
+        .card-bg {
+            background-color: #1A1A1A;
+            border: 1px solid #2a2a2a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-bg:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+        }
+        .btn-primary {
+            background-color: #46cf5b;/*#D4AF37;*/
+            color: #111111;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #E7C657;
+            transform: scale(1.05);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #D4AF37;
+            color: #111111;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-[#111111] sticky top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo no Header -->
+            <img src="einventarts.png" class="h-10" style="float:left; height: 50px; marging-top: 10px;">
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#solucoes" class="hover:text-gold-text transition-colors duration-300">Soluções</a>
+                <a href="#sobre" class="hover:text-gold-text transition-colors duration-300">Sobre Nós</a>
+                <a href="#contato" class="bg-transparent border border-gold-text text-gold-text px-4 py-2 rounded-md hover:bg-gold-text hover:gold-text transition-all duration-300">Contato</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#solucoes" class="block px-6 py-3 text-center hover:bg-gray-800">Soluções</a>
+            <a href="#sobre" class="block px-6 py-3 text-center hover:bg-gray-800">Sobre Nós</a>
+            <a href="#contato" class="block px-6 py-3 text-center hover:bg-gray-800">Contato</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg py-24 ">
+            <div class="container mx-auto px-6 text-center">
+                <!-- Logo Grande na Apresentação -->
+                <img src="logo.png" alt="Logo Reinventarts em destaque" class="mx-auto mb-8"
+                 style="height: 350px;width: 350px; border: solid 1px white;">
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    Reinventando o <span class="gold-text">SEU Crescimento</span><br class="hidden md:block"> na Era Digital
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-400 mb-8">
+                    Combinamos estratégia, design e tecnologia para criar soluções digitais que impulsionam o seu negócio. Transformamos desafios em oportunidades de crescimento.
+                </p>
+                <a href="#solucoes" class="btn-primary font-bold py-3 px-8 rounded-lg text-lg">
+                    Descubra Nossas Soluções
+                </a>
+            </div>
+        </section>
+
+        <!-- Soluções Section -->
+        <section id="solucoes" class="py-20 md:py-28 bg-[#151515]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Soluções de Alta Performance</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        Oferecemos um ecossistema completo de serviços para posicionar sua marca, engajar seu público e acelerar suas vendas.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Inovação para Fintechs -->
+                    <div class="card-bg p-8 rounded-lg">
+                        <div class="gold-text mb-4" id="icon-fintech"></div>
+                        <h3 class="text-2xl font-bold mb-3">Desenvolvimento Web & E-commerce</h3>
+                        <p class="text-gray-400">
+                            Criamos sites, landing pages e lojas virtuais de alta performance, focados em design responsivo, experiência do usuário (UX) e conversão.
+                        </p>
+                    </div>
+                    <!-- Card 2: Chatbots & IA Conversacional -->
+                    <div class="card-bg p-8 rounded-lg">
+                        <div class="gold-text mb-4" id="icon-chatbot"></div>
+                        <h3 class="text-2xl font-bold mb-3">Chatbots & IA Conversacional</h3>
+                        <p class="text-gray-400">
+                            Criamos chatbots inteligentes para qualificação de leads, suporte ao cliente e automação de vendas, proporcionando atendimento 24/7 e otimizando a conversão.
+                        </p>
+                    </div>
+                    <!-- Card 3: Performance & Vendas Online -->
+                    <div class="card-bg p-8 rounded-lg">
+                        <div class="gold-text mb-4" id="icon-performance"></div>
+                        <h3 class="text-2xl font-bold mb-3">Performance & Vendas Online</h3>
+                        <p class="text-gray-400">
+                            Gerenciamos campanhas de tráfego pago (Google & Meta Ads) e otimizamos a taxa de conversão (CRO) para transformar cliques em resultados financeiros concretos.
+                        </p>
+                    </div>
+                     <!-- Card 4: Branding & Posicionamento -->
+                    <div class="card-bg p-8 rounded-lg">
+                        <div class="gold-text mb-4" id="icon-branding"></div>
+                        <h3 class="text-2xl font-bold mb-3">Branding & Posicionamento</h3>
+                        <p class="text-gray-400">
+                           Construímos marcas fortes e memoráveis, desde a identidade visual até a estratégia de comunicação, garantindo um lugar de destaque no mercado.
+                        </p>
+                    </div>
+                     <!-- Card 5: SEO & Conteúdo Estratégico -->
+                    <div class="card-bg p-8 rounded-lg">
+                        <div class="gold-text mb-4" id="icon-seo"></div>
+                        <h3 class="text-2xl font-bold mb-3">SEO & Conteúdo Estratégico</h3>
+                        <p class="text-gray-400">
+                           Posicionamos sua empresa no topo das buscas orgânicas com estratégias de SEO e conteúdo que atraem, educam e convertem seu público-alvo.
+                        </p>
+                    </div>
+                     <!-- Card 6: Automação de Marketing -->
+                    <div class="card-bg p-8 rounded-lg">
+                        <div class="gold-text mb-4" id="icon-automation"></div>
+                        <h3 class="text-2xl font-bold mb-3">Automação de Marketing</h3>
+                        <p class="text-gray-400">
+                           Implementamos fluxos de automação para nutrir leads, personalizar a comunicação e escalar o relacionamento com clientes de forma eficiente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nós Section -->
+        <section id="sobre" class="py-20 md:py-28 hero-bg">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="section-title mb-4">Nascemos para <span class="gold-text">inovar</span>.</h2>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            A Reinventarts não é apenas uma agência. Somos um parceiro estratégico que vive e respira a intersecção entre a tecnologia de ponta e o dinamismo do mercado. Nossa missão é clara: desmistificar o digital e utilizá-lo como a principal alavanca para o crescimento e a consolidação dos nossos clientes.
+                           
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Nossa equipe é formada por especialistas obcecados por resultados, que combinam visão de mercado com expertise técnica para entregar projetos que não apenas impressionam, mas que, acima de tudo, geram valor real e mensurável.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="ai.png?q=80&w=1932&auto=format&fit=crop" alt="Equipe Reinventarts em reunião" class="rounded-lg shadow-2xl w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/e0e0e0?text=Nossa+Equipe';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="py-20 md:py-28 bg-[#151515]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Vamos construir o futuro juntos?</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                        Preencha o formulário abaixo e um de nossos especialistas entrará em contato para agendar uma conversa estratégica.
+                    </p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="sr-only">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Seu nome completo" required class="w-full bg-[#1A1A1A] border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold-text">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" required class="w-full bg-[#1A1A1A] border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold-text">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Mensagem</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Conte-nos sobre seu desafio..." required class="w-full bg-[#1A1A1A] border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold-text"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary font-bold py-3 px-12 rounded-lg text-lg w-full md:w-auto">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111111] border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <p>&copy; 2025 Reinventarts. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Construindo o SEU Futuro Digital.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Defer icon rendering until the window has fully loaded
+        window.onload = function() {
+            const createIcon = (elementId, iconName) => {
+                const iconContainer = document.getElementById(elementId);
+                // Check if the lucide library is available before trying to use it
+                if (iconContainer && typeof lucide !== 'undefined') {
+                    const IconComponent = React.createElement(lucide[iconName], { size: 40, strokeWidth: 1.5 });
+                    ReactDOM.render(IconComponent, iconContainer);
+                }
+            };
+
+            createIcon('icon-fintech', 'Landmark');
+            createIcon('icon-chatbot', 'Bot');
+            createIcon('icon-performance', 'TrendingUp');
+            createIcon('icon-branding', 'Gem');
+            createIcon('icon-seo', 'Search');
+            createIcon('icon-automation', 'Zap');
+        };
+    </script>
+</body>
+</html>
